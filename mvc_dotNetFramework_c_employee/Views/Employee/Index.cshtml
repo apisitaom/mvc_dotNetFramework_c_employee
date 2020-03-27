@@ -3,8 +3,8 @@
     ViewBag.Title = "Employeee List";
 }
 
-<h2>Employee CRUD Operations</h2>                                                            
-<a class="btn btn-outline-info" style="margin-bottom: 10px" onclick="PopupForm('@Url.Action("AddOrEdit","Employee")')"><i class="fa fa-plus"></i>Add New</a>
+<h2>ASP.NET Web Application(.NET Framework) Employee </h2>                                                            
+<a class="btn btn-outline-success" style="margin-bottom: 10px" onclick="PopupForm('@Url.Action("AddOrEdit","Employee")')"><i class="fa fa-plus"></i>Add New</a>
 <table id="employeeTable" class="disabled" style="width: 100%">
     <thead>
         <tr>
@@ -13,6 +13,7 @@
             <th>Office</th>
             <th>Age</th>
             <th>Salary</th>
+            <th></th>
         </tr>
     </thead>
 </table>
@@ -35,7 +36,14 @@
                     {"data": "Position"},
                     {"data": "Office"},
                     {"data": "Age"},
-                    { "data": "Salary" }
+                    {"data": "Salary" },
+                    {"data":"EmployeeID" , "render" : function (data) {
+                        return "<a class='btn btn-default btn-sm' onclick=PopupForm('@Url.Action("AddOrEdit","Employee")/" + data + "')><i class='fa fa-pencil'></i> Edit</a><a class='btn btn-danger btn-sm' style='margin-left:5px' onclick=Delete("+data+")><i class='fa fa-trash'></i> Delete</a>";
+                    },
+                        "orderable": false,
+                        "searchable":false,
+                        "width":"150px"
+                    }
                 ],
                 "language": {
                     "emtrytable": "No data, Please <b>click Add</b> New"
@@ -52,8 +60,8 @@
                     autoOpen: true,
                     resizable: false,
                     title: 'Fill Employee Details',
-                    height: 500,
-                    width: 700,
+                    height: 700,
+                    width: 900,
                     close: function () {
                         Popup.dialog('destroy').remove();
                     }
