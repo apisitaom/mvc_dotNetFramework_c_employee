@@ -20,5 +20,21 @@ namespace mvc_dotNetFramework_c_employee.Controllers
                 return Json(new { data = empList }, JsonRequestBehavior.AllowGet);
             }
         }
+        [HttpGet]
+        public ActionResult AddOrEdit(int id = 0)
+        {
+            return View(new Employee());
+        }
+
+        [HttpPost]
+        public ActionResult AddOrEdit(Employee emp)
+        {
+            using (DBModel db = new DBModel())
+            {
+                db.Employees.Add(emp);
+                db.SaveChanges();
+                return Json(new { success=true, message="Saved Successfully" }, JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 }

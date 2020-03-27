@@ -11,11 +11,14 @@ namespace mvc_dotNetFramework_c_employee.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Employee
     {
         public int EmployeeID { get; set; }
+        [Required(ErrorMessage = "This fill is required")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "This fill is required")]
         public string Position { get; set; }
         public string Office { get; set; }
         public Nullable<int> Age { get; set; }
