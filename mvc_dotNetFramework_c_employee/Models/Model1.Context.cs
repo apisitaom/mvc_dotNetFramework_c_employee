@@ -25,6 +25,7 @@ namespace mvc_dotNetFramework_c_employee.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
     }
 }

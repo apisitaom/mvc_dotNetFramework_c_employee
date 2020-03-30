@@ -3,8 +3,8 @@
     ViewBag.Title = "Employeee List";
 }
 
-<h2>ASP.NET Web Application(.NET Framework) Employee </h2>                                                            
-<a class="btn btn-outline-success" style="margin-bottom: 10px" onclick="PopupForm('@Url.Action("AddOrEdit","Employee")')"><i class="fa fa-plus"></i>Add New</a>
+<h2>ASP.NET Web Application(.NET Framework) Employee </h2>
+<button type="button" class="btn btn-success" style="margin-bottom: 10px" onclick="PopupForm('@Url.Action("AddOrEdit","Employee")')"><i class="fa fa-plus"></i>Add New</button>
 <table id="employeeTable" class="disabled" style="width: 100%">
     <thead>
         <tr>
@@ -111,5 +111,5 @@
             }
         }
     </script>
-    }
+}
 
