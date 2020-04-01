@@ -10,7 +10,6 @@ namespace mvc_dotNetFramework_c_employee.Controllers
 {
     public class EmployeeController : Controller
     {
-        // GET: Employee
         public ActionResult Index()
         {
             return View();

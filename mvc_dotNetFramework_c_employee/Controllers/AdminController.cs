@@ -5,12 +5,11 @@ using System.Web;
 using System.Data.Entity;
 using System.Web.Mvc;
 using mvc_dotNetFramework_c_employee.Models;
-
+    
 namespace mvc_dotNetFramework_c_employee.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
         public ActionResult Index()
         {
             return View();

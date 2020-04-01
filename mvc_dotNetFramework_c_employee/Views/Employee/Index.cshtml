@@ -5,6 +5,7 @@
 
 <h2>ASP.NET Web Application(.NET Framework) Employee </h2>
 <button type="button" class="btn btn-success" style="margin-bottom: 10px" onclick="PopupForm('@Url.Action("AddOrEdit","Employee")')"><i class="fa fa-plus"></i>Add New</button>
+<a class="btn btn-outline-primary" @Html.ActionLink("TO ADMIN", "Index", "Admin") />
 <table id="employeeTable" class="disabled" style="width: 100%">
     <thead>
         <tr>
@@ -55,7 +56,6 @@
             $.get(url)
             .done(function (response) {
                 formDiv.html(response);
-
                 Popup = formDiv.dialog({
                     autoOpen: true,
                     resizable: false,
@@ -80,7 +80,6 @@
                         if (data.success) {
                             Popup.dialog('close');
                             dataTable.ajax.reload();
-
                         }
                     }
                 });
