@@ -3,8 +3,11 @@
 @{
     Layout = null;
 }
-<h2>Admin View</h2>
-@using (Html.BeginForm("AddOrEdit", "Admin", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+@using (Html.BeginForm("Add", "Admin", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
 {
-    
+    @Html.HiddenFor(model => model.adminid)
+    <div class="form-group">
+        @Html.LabelFor(model => model.email, new { @class = "control-label" })
+        @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
 }
