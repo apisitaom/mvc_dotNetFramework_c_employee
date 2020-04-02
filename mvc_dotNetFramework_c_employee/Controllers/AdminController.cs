@@ -25,11 +25,17 @@ namespace mvc_dotNetFramework_c_employee.Controllers
         public ActionResult Add(Admin admin) {
             using (DBModel db = new DBModel())
             {
+                if (admin.adminid == 0) {
                 db.Admins.Add(admin);
                 db.SaveChanges();
                 return Json(new { success = true, message = "Save Successfully" });
+                } else {
+                    return Json(new { success = false, message = "Save Error!!" });
+
+                }
             }
         }
+        [HttpPost]
         public ActionResult Edit(Admin admin) {
             using (DBModel db = new DBModel())
             {
