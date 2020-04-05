@@ -23,8 +23,8 @@
                   Dropdown
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Contact</a>
-                  <a class="dropdown-item" href="#">About Us</a>
+                  <a class="dropdown-item" @Html.ActionLink("Contact", "Contact", "Home") </a>
+                  <a class="dropdown-item" @Html.ActionLink("About Us", "About", "Home") </a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Comment</a>
               </div>
@@ -46,10 +46,10 @@
     </div>
     <div class="row">
         <div class="col">
-            <img style="width: 100%" src="~/public/img/elephant.jpg" alt="elephant_picture" />
+            <img style="width: 100%" src="~/public/img/stock_1.jpg" alt="elephant_picture" />
         </div>
         <div class="col">
-            <img style="width: 100%" src="~/public/img/mae.jpg" alt="profile_img" />
+            <img style="width: 100%" src="~/public/img/thai_map.png" alt="profile_img" />
         </div>
     </div>
 </div>

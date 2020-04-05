@@ -220,8 +220,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="public\img\elephant.jpg" />
-    <Content Include="public\img\mae.jpg" />
+    <Content Include="public\img\stock_1.jpg" />
+    <Content Include="public\img\thai_map.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
